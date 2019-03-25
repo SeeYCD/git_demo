@@ -1,0 +1,26 @@
+#mysql
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dqc?useunicode=true&characterEncoding=utf8
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.jdbc.Driver
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+# Specify the DBMS
+  jpa:
+    database : MYSQL
+# Show or not log for each sql query
+    show-sql : true
+# Hibernate ddl auto (create, create-drop, update)
+    hibernate:
+       ddl-auto : update
+       # 注意，如果通过jpa在数据库中建表，将jpa.hibernate,ddl-auto改为create，建完表之后，要改为update,要不然每次重启工程会删除表并新建。
+# Naming strategy
+       naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+# stripped before adding them to the entity manager
+    properties:
+       hibernate:
+           dialect : org.hibernate.dialect.MySQL5Dialect
