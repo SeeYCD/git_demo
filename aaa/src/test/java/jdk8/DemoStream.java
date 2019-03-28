@@ -2,7 +2,6 @@ package jdk8;
 
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * Stream
  * @author user
