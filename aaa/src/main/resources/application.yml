@@ -1,9 +1,14 @@
 #mysql
+server:
+    servlet:
+      context-path: /aa
 spring:
+  banner:
+    charset: UTF-8
   datasource:
-    url: jdbc:mysql://localhost:3306/dqc?useunicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/mydb?useunicode=true&characterEncoding=utf8
     username: root
-    password: 1234
+    password: root
     driver-class-name: com.mysql.jdbc.Driver
     max-idle: 10
     max-wait: 10000
